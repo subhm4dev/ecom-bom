@@ -12,6 +12,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-      - run: mvn -B deploy
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          server-id: github
+          server-username: subhm4dev
+          server-password: ${{ secrets.GITHUB_TOKEN }}
+      - run: mvn -B deploy -Dgithub.repository.owner= subhm4dev
