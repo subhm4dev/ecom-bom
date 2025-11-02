@@ -15,4 +15,4 @@ jobs:
           server-id: github
           server-username: subhm4dev
           server-password: ${{ secrets.GITHUB_TOKEN }}
-      - run: mvn -B deploy -Dgithub.repository.owner= subhm4dev
+      - run: mvn -B deploy
